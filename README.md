@@ -1,2 +1,2 @@
 Practice Project
-Practice Proj
+Practice Pro
