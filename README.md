@@ -1,2 +1,2 @@
 Practice Project
-Practice P
+Practice 
