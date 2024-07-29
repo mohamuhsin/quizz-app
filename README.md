@@ -1,1 +1,1 @@
-Practice Projec
+Practice Proje
