@@ -3,15 +3,18 @@ import { useEffect, useState } from "react";
 export default function QuestionTimer({ timeout, onTimeout }) {
     const [remainingTime, setRemainingTime] = useState(timeout);
 
+    // skip a question after time out
+    // clean up timer
     useEffect(() => {
         console.log("SET TIMEOUT");
         const timer = setTimeout(onTimeout, timeout);
 
         return () => {
-            clearTimeout(timer);
+            clearTimeout(timer); {/* clear the timer when instance of the QuestionTimer unmounts*/}
         };
     }, [timeout, onTimeout]);
 
+    // update progressbar at intervals
     useEffect(() => {
         console.log("SET INTERVAL");
         const interval = setInterval(() => {
@@ -19,7 +22,7 @@ export default function QuestionTimer({ timeout, onTimeout }) {
         }, 100);
 
         return () => {
-            clearInterval(interval);
+            clearInterval(interval); {/* clear the interval when instance of the QuestionTimer unmounts to stop counting */}
         };
     }, []);
 
