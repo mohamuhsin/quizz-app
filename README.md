@@ -1,1 +1,1 @@
-practice projec.
+practice project.
